@@ -5,7 +5,8 @@ import numpy as np
 from keras.models import load_model
 import traceback
 
-model_path = r'C:\Users\salma elyagoubi\Downloads\MVP\MVP\Sign-Language-To-Text-and-Speech-Conversion-master\cnn8grps_rad1_model.h5'
+model_path = r'Sign-Language-To-Text-and-Speech-Conversion-master\cnn8grps_rad1_model.h5'
+model=load_model(model_path)
 white = np.ones((400, 400), np.uint8) * 255
 cv2.imwrite("white.jpg", white)
 
