@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import math
-import cv2
-import os
-<<<<<<< HEAD
-=======
->>>>>>> 06746ce05e8e2e1899442dcd4adcc61a26196105
->>>>>>> 73545d964dec29ed455652c9047f7f01c1b51acc
-=======
->>>>>>> e91b072163f99d1fb2147c1321de1bcf5c13dfd2
 import streamlit as st
 import cv2
 import numpy as np
@@ -20,27 +8,9 @@ import pyttsx3
 from string import ascii_uppercase
 import enchant
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 # Initialize enchant dictionary
 ddd = enchant.Dict("en-US")
 # Initialize Hand Detectors
-=======
->>>>>>> 73545d964dec29ed455652c9047f7f01c1b51acc
-model_path = r'Sign-Language-To-Text-and-Speech-Conversion-master\cnn8grps_rad1_model.h5'
-model = load_model(model_path)
-white = np.ones((400, 400), np.uint8) * 255
-cv2.imwrite("white.jpg", white)
-
-# Initialize hand detectors
->>>>>>> 06746ce05e8e2e1899442dcd4adcc61a26196105
-=======
-# Initialize enchant dictionary
-ddd = enchant.Dict("en-US")
-# Initialize Hand Detectors
->>>>>>> e91b072163f99d1fb2147c1321de1bcf5c13dfd2
 hd = HandDetector(maxHands=1)
 hd2 = HandDetector(maxHands=1)
 
