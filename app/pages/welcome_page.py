@@ -1,8 +1,11 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e91b072163f99d1fb2147c1321de1bcf5c13dfd2
 from twilio.rest import Client
 from opencage.geocoder import OpenCageGeocode
 from geopy.geocoders import Nominatim
@@ -10,8 +13,8 @@ import geocoder
 import os
 
 
-TWILIO_ACCOUNT_SID = 'add twilio account sid'
-TWILIO_AUTH_TOKEN = ' add twilio auth token'
+TWILIO_ACCOUNT_SID = 'add yours'
+TWILIO_AUTH_TOKEN = 'add yours'
 
 # Custom CSS for button styling
 st.markdown(
@@ -125,13 +128,14 @@ def welcome_page():
         st.write(f"Location: {location}")
         try:
             message_sid = send_sms(location)
-            st.success(f"Message sent successfully! SID: {message_sid}")
+            st.success(f"Message sent successfully! SID: {message_sid} please wait for help in ")
         except Exception as e:
             st.error(f"Failed to send message: {e}")
     st.markdown('</div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     welcome_page()
+<<<<<<< HEAD
 =======
 >>>>>>> 73545d964dec29ed455652c9047f7f01c1b51acc
 from transcribe_audio_page import transcribe_audio_page
@@ -272,3 +276,5 @@ if __name__ == "__main__":
 =======
 >>>>>>> 06746ce05e8e2e1899442dcd4adcc61a26196105
 >>>>>>> 73545d964dec29ed455652c9047f7f01c1b51acc
+=======
+>>>>>>> e91b072163f99d1fb2147c1321de1bcf5c13dfd2
