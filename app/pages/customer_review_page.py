@@ -1,5 +1,4 @@
 #pip install psycopg2-binary googletrans==4.0.0-rc1
-
 import streamlit as st
 import psycopg2
 from googletrans import Translator
@@ -10,11 +9,13 @@ translator = Translator()
 
 # Database connection
 def get_db_connection():
+    #port 5432
     return psycopg2.connect(
-        host="your_postgresql_host",
-        database="your_database_name",
-        user="your_database_user",
-        password="your_database_password"
+        host="localhost",
+        database="action_learning_reviews",
+        user="al01",
+        password="actionlearning1",
+        port='5342'
     )
 
 def get_user_ip():

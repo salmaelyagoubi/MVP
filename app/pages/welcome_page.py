@@ -1,8 +1,9 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-from pages.hand_sign_detection_page import hand_sign_detection_page
-from pages.transcribe_audio_page import transcribe_audio_page
+from transcribe_audio_page import transcribe_audio_page
+from customer_review_page import customer_reviews_page
 
+# Define supported languages and translations
 LANGUAGES = {
     'en': 'English',
     'fr': 'French',
@@ -92,6 +93,11 @@ translations = {
             'en': 'Go to Audio/Video Transcription',
             'fr': "Aller à la transcription audio/vidéo",
             'es': 'Ir a la transcripción de audio/vídeo'
+        },
+        'reviews': {
+            'en': 'Customer Reviews',
+            'fr': 'Avis des clients',
+            'es': 'Opiniones de los clientes'
         }
     }
 }
@@ -123,6 +129,8 @@ def main():
         hand_sign_detection_page(selected_lang)  # Ensure this function accepts the language argument
     if st.button(translations['buttons']['transcription'][selected_lang]):
         transcribe_audio_page(selected_lang)
+    if st.button(translations['buttons']['reviews'][selected_lang]):
+        customer_reviews_page(selected_lang)
 
 if __name__ == "__main__":
     main()
