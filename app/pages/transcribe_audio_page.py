@@ -119,4 +119,15 @@ def transcribe_audio_page(selected_lang):
             except Exception as e:
                 st.error(f"{translations['error_occurred'][selected_lang]} {e}")
         else:
+<<<<<<< HEAD
             st.error(translations['no_input_error'][selected_lang])
+=======
+<<<<<<< HEAD
+            st.error("Please enter a URL or upload a file.")
+
+if __name__ == "__main__":
+    transcribe_audio_page()
+=======
+            st.error(translations['no_input_error'][selected_lang])
+>>>>>>> 06746ce05e8e2e1899442dcd4adcc61a26196105
+>>>>>>> 73545d964dec29ed455652c9047f7f01c1b51acc
