@@ -6,9 +6,9 @@ import requests
 import pytube
 
 LANGUAGES = {
-    'en': 'English',
-    'fr': 'French',
-    'es': 'Spanish'
+    'English': 'en',
+    'Français': 'fr',
+    'Español': 'es'
 }
 
 translations = {
@@ -64,16 +64,19 @@ translations = {
     }
 }
 
-def transcribe_audio_page(selected_lang):
-    st.title(translations['title'][selected_lang])
-
-    url = st.text_input(translations['url_input'][selected_lang])
-    uploaded_file = st.file_uploader(translations['file_uploader'][selected_lang], type=["mp3", "wav", "mp4"])
+def transcribe_audio_page():
+    selected_lang = st.session_state.get("selected_lang", "English")
+    lang_code = LANGUAGES[selected_lang]
     
-    if st.button(translations['transcribe_button'][selected_lang]):
+    st.title(translations['title'][lang_code])
+
+    url = st.text_input(translations['url_input'][lang_code])
+    uploaded_file = st.file_uploader(translations['file_uploader'][lang_code], type=["mp3", "wav", "mp4"])
+    
+    if st.button(translations['transcribe_button'][lang_code]):
         if url or uploaded_file:
             try:
-                st.write(translations['processing_message'][selected_lang])
+                st.write(translations['processing_message'][lang_code])
                 audio_file = "audio.wav"
 
                 if uploaded_file:
@@ -92,7 +95,7 @@ def transcribe_audio_page(selected_lang):
                 else:
                     response = requests.get(url)
                     if response.status_code != 200:
-                        st.error(translations['error_message'][selected_lang])
+                        st.error(translations['error_message'][lang_code])
                         return
                     with open("video.mp4", 'wb') as f:
                         f.write(response.content)
@@ -104,8 +107,8 @@ def transcribe_audio_page(selected_lang):
                 with sr.AudioFile(audio_file) as source:
                     audio_data = recognizer.record(source)
                 text = recognizer.recognize_google(audio_data)
-                st.success(translations['transcription_success'][selected_lang])
-                st.text_area(translations['transcription_label'][selected_lang], text, height=200)
+                st.success(translations['transcription_success'][lang_code])
+                st.text_area(translations['transcription_label'][lang_code], text, height=200)
                 
                 # Cleanup
                 os.remove(audio_file)
@@ -117,17 +120,9 @@ def transcribe_audio_page(selected_lang):
                     os.remove("audio.mp4")
                 
             except Exception as e:
-                st.error(f"{translations['error_occurred'][selected_lang]} {e}")
+                st.error(f"{translations['error_occurred'][lang_code]} {e}")
         else:
-<<<<<<< HEAD
-            st.error(translations['no_input_error'][selected_lang])
-=======
-<<<<<<< HEAD
-            st.error("Please enter a URL or upload a file.")
+            st.error(translations['no_input_error'][lang_code])
 
 if __name__ == "__main__":
     transcribe_audio_page()
-=======
-            st.error(translations['no_input_error'][selected_lang])
->>>>>>> 06746ce05e8e2e1899442dcd4adcc61a26196105
->>>>>>> 73545d964dec29ed455652c9047f7f01c1b51acc
