@@ -10,6 +10,11 @@ translator = Translator()
 # Database connection
 def get_db_connection():
     #port 5432
+    """
+    In PgAdmin, execute the following command:
+    CREATE USER al01 WITH PASSWORD 'actionlearning1';
+    GRANT ALL PRIVILEGES ON DATABASE action_learning_reviews TO al01;
+    """
     return psycopg2.connect(
         host="localhost",
         database="action_learning_reviews",
