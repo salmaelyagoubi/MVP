@@ -22,7 +22,8 @@ class Application:
     def __init__(self):
         self.vs = cv2.VideoCapture(0)
         self.current_image = None
-        self.model = load_model(r'C:\Users\salma elyagoubi\Downloads\MVP\MVP\Sign-Language-To-Text-and-Speech-Conversion-master\cnn8grps_rad1_model.h5')  # Update with the path to your model
+        relative_model_path=r'Sign-Language-To-Text-and-Speech-Conversion-master\cnn8grps_rad1_model.h5'
+        self.model = load_model(relative_model_path)  # Update with the RELATIVE path to your model
         self.speak_engine = pyttsx3.init()
         self.speak_engine.setProperty("rate", 100)
         voices = self.speak_engine.getProperty("voices")
