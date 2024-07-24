@@ -58,7 +58,7 @@ def get_db_connection():
     return psycopg2.connect(
         host="localhost",
         database="action_learning_reviews",
-        user="al01",
+        user="postgres",
         password="actionlearning1",
         port='5432'
     )
