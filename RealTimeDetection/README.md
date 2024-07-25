@@ -2,6 +2,21 @@
 
 This project implements real-time hand gesture recognition using computer vision and machine learning techniques. It can identify hand gestures corresponding to the letters 'A', 'B', and 'L' using a webcam feed.
 
+
+## Demo
+
+![Hand Sign Detection Demo](https://github.com/user-attachments/assets/5d52e3fe-c01e-4b89-aa2f-a8fc544c3101)
+
+The GIF above demonstrates the hand gesture recognition system in action. As shown, the system can:
+
+- Detect hand movements in real-time
+- Recognize different hand gestures (A, B, L)
+- Display the recognized gesture on the screen
+- Draw a bounding box around the detected hand
+- Visualize hand landmarks
+
+This demo showcases the accuracy and responsiveness of the system in various lighting conditions and hand positions.
+
 ## Table of Contents
 
 - [Features](#features)
