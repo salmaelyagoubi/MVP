@@ -56,4 +56,4 @@ def customer_reviews_page(selected_lang):
 
 # Call the function to display the page
 if __name__ == "__main__":
-    customer_reviews_page(selected_lang='en')  # Default to English
+    customer_reviews_page(selected_lang='en') 
