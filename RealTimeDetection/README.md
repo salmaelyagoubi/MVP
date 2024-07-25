@@ -70,10 +70,15 @@ Copy
 ## Project Structure
 hand-gesture-recognition/
 │
-├── gesture_recognition.py  # Main script
-├── model.p                 # Pre-trained machine learning model
-├── README.md               # Project documentation
-└── requirements.txt        # List of Python dependencies
+
+├── gesture_recognition.py
+                            # Main script
+├── model.p
+                            # Pre-trained machine learning model
+├── README.md
+                            # Project documentation
+└── requirements.txt
+                            # List of Python dependencies
 Copy
 ## Customization
 
