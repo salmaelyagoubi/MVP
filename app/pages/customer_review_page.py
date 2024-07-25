@@ -1,4 +1,3 @@
-#pip install psycopg2-binary googletrans==4.0.0-rc1
 import streamlit as st
 import psycopg2
 from googletrans import Translator
@@ -9,7 +8,6 @@ translator = Translator()
 
 # Database connection
 def get_db_connection():
-    #port 5432
     return psycopg2.connect(
         host="localhost",
         database="action_learning_reviews",
@@ -55,3 +53,7 @@ def customer_reviews_page(selected_lang):
             st.success("Thank you for your feedback!")
         except Exception as e:
             st.error(f"An error occurred: {e}")
+
+# Call the function to display the page
+if __name__ == "__main__":
+    customer_reviews_page(selected_lang='en')  # Default to English
