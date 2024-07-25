@@ -5,10 +5,13 @@ from opencage.geocoder import OpenCageGeocode
 from geopy.geocoders import Nominatim
 import geocoder
 import os
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
 
-TWILIO_ACCOUNT_SID = 'AC13cb456b3d26a0b99137f5cbf62d2050'
-TWILIO_AUTH_TOKEN = '88c29eac4bec965d748d9e0ee182da07'
+TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 
 # Custom CSS for button styling
 st.markdown(
