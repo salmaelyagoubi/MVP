@@ -3,7 +3,7 @@
 This repository contains a Python project that uses OpenCV and the cvzone library to control keyboard inputs based on hand gestures detected via a webcam. This project is particularly aimed at controlling the space key to simulate a jumping action in games or other applications.
 
 # Demo of The Game 
-Just as gamers have mastered the WASD keys, it's now time to embrace AB in sign language. AB is set to become the new standard for future gamers
+Just as gamers have mastered the WASD keys, it's now time to embrace AB in sign language , AB is set to become the new standard for future gamers
 
 ![Dino_Game-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/5889d07d-5925-4176-9ca5-51d54c7433da)
 
